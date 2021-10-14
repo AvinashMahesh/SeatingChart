@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class SeatingChartTester {
+
+	public static void main(String[] args) {
+		
+		List <Student> thing = new ArrayList <Student>();
+		Student a = new Student ("Billy", 6);
+		Student b = new Student ("Noel", 2);
+		Student c = new Student ("Lenny", 1);
+		Student d = new Student ("Amanda", 8);
+		Student e = new Student ("Leo", 3);
+		Student f = new Student ("Hilo", 9);
+		Student g = new Student ("Chico", 2);
+		Student h = new Student ("Lory", 4);
+		Student i = new Student ("Niko", 8);
+		Student j = new Student ("Sanjeev", 4);
+		
+		thing.add(a);
+		thing.add(b);
+		thing.add(c);
+		thing.add(d);
+		thing.add(e);
+		thing.add(f);
+		thing.add(g);
+		thing.add(h);
+		thing.add(i);
+		thing.add(j);
+		
+		SeatingChart chart = new SeatingChart (thing, 3, 4);
+		chart.removeAbsentStudents (6);
+chart.switchSeats(1, 2, 2, 1);
+		chart.isValidCol(2);
+		chart.isValidRow(4);
+		chart.toString();
+
+	}
+
+}
